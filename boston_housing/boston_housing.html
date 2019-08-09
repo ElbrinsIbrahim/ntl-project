@@ -13385,7 +13385,7 @@ I expect the increase: in the case 'RM' lead to an increase in the value of 'MED
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -13461,13 +13461,13 @@ I expect the increase: in the case 'RM' lead to an increase in the value of 'MED
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="c1"># TODO: Shuffle and split the data into training and testing subsets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
 
 <span class="c1"># Success</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training and testing split was successful.&quot;</span><span class="p">)</span>
@@ -13510,8 +13510,8 @@ I expect the increase: in the case 'RM' lead to an increase in the value of 'MED
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>    we can train the model using one part of the data and then evaluate it using the other part,That way I can figure out if I am overfitting to the training data or not by estimating model performance on unseen data, I can simulate what whould happen if I applied it to new data in reality,Without testing the data will be my expectation
- For new data is inaccurate and I can not generalize any model.</p>
+<p><strong>Answer: </strong>    splitting a dataset into some ratio of training and testing subsets for a learning algorithm is very useful to trian the algorithm on training data and evaluate it on test data that how we can know if the algorithm has a high variance or high bias and so we can know how to fix that.
+we may also need to split train data to cross validation data and train data to use CV data as a test data when we need to choose the algorithm parameters.</p>
 
 </div>
 </div>
